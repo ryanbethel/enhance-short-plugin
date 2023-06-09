@@ -1,0 +1,34 @@
+{
+  "name": "enhance-short",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "exports": {
+    ".": "src/index.js",
+    "calc-short": "./"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ]
+    },
+    "ignorePatterns": [],
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2022
+    }
+  },
+  "dependencies": {
+    "@architect/functions": "^5.4.0",
+    "@begin/data": "^4.0.2",
+    "@begin/validator": "^0.0.10",
+    "@enhance/arc-plugin-enhance": "github:enhance-dev/arc-plugin-enhance",
+    "@enhance/form-elements": "github:enhance-dev/form-elements",
+    "newbase60": "^1.3.1",
+  }
+}
