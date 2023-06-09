@@ -1,15 +1,15 @@
-const { DateToSxg } = require( 'newbase60')
-const  {readFileSync} = require( 'fs')
+const { DateToSxg } = require('newbase60')
+const { readFileSync } = require('fs')
 const path = require('path')
+// const checkDates = require('./check-dates.js')
 
-function readRedirects({inventory}){
+function readRedirects({ inventory }) {
   const cwd = inventory.inv._project.cwd
   const redirectsJson = readFileSync(path.join(cwd, 'app', 'redirects.json'), 'utf8')
   return JSON.parse(redirectsJson)
 }
 
-const checkDates = require('./check-dates.js')
-function postsDir({inventory}){
+function postsDir({ inventory }) {
   const cwd = inventory.inv._project.cwd
   return path.join(cwd, 'app', 'blog', 'posts')
 }
@@ -29,45 +29,45 @@ module.exports = {
     const sxg = DateToSxg(new Date(`${year}-${month}-${day}`))
 
     const types = {
-      blog:'b',
-      note:'n',
+      blog: 'b',
+      note: 'n',
     }
     return `${shortDomain}/${types[type]}${sxg}${ordinal}`
   },
-  sandbox: { 
-    start: (params)=>{
-      checkDates(postsDir(params))
-    },
-    watcher: (params) => {
-      let { filename } = params
-      if (!filename.includes(postsDir(params)) || !filename.endsWith('.md')) {
-        return
-      }
-      checkDates(postsDir(params))
-    }
-  },
-  deploy: { 
-    start: (params)=>{
-      checkDates(postsDir(params))
-    }
-  },
+  // sandbox: { 
+  //   start: (params)=>{
+  //     checkDates(postsDir(params))
+  //   },
+  //   watcher: (params) => {
+  //     let { filename } = params
+  //     if (!filename.includes(postsDir(params)) || !filename.endsWith('.md')) {
+  //       return
+  //     }
+  //     checkDates(postsDir(params))
+  //   }
+  // },
+  // deploy: { 
+  //   start: (params)=>{
+  //     checkDates(postsDir(params))
+  //   }
+  // },
   set: {
     http(params) {
       const redirects = readRedirects(params)
-      const redirectHandler =  path.join(__dirname, 'routes', 'redirects')
-      const redirectRoutes = Object.keys(redirects).map(route=> (
+      const redirectHandler = path.join(__dirname, 'routes', 'redirects')
+      const redirectRoutes = Object.keys(redirects).map(route => (
         {
-          method: 'get', 
-          path: route, 
-          src: redirectHandler, 
+          method: 'get',
+          path: route,
+          src: redirectHandler,
           config: {
             // shared: false,
             views: true,
           }
         }
       )
-      ) 
-      
+      )
+
       return [
         ...redirectRoutes,
         {
