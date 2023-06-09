@@ -1,8 +1,0 @@
-{
-  "name": "enhance-short",
-  "version": "0.0.0",
-  "main": "src/plugin/short-cut/index.js",
-  "dependencies": {
-    "newbase60": "^1.3.1"
-  }
-}

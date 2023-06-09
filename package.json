@@ -1,10 +1,11 @@
 {
   "name": "enhance-short",
   "version": "0.0.1",
-  "main": "src/index.js",
+  "main": "src/plugin/short-cut/index.js",
   "exports": {
-    ".": "src/index.js",
-    "calc-short": "./"
+    ".": "src/plugin/short-cut/index.js",
+    "calc-short-link": "./lib/calc-short-link/index.js",
+    "short-get-handler": "./lib/short-get-handler/index.js",
   },
   "eslintConfig": {
     "env": {
