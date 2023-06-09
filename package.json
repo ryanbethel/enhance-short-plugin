@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "main": "index.js",
   "exports": {
-    ".": "index.js",
     "calc-short-link": "./lib/calc-short-link/index.js",
     "short-get-handler": "./lib/short-get-handler/index.js"
   },
