@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "main": "index.js",
   "exports": {
-    "calc-short-link": "./lib/calc-short-link/index.js",
-    "short-get-handler": "./lib/short-get-handler/index.js"
+    ".": "index.js",
+    "./calc-short-link": "./lib/calc-short-link/index.js",
+    "./short-get-handler": "./lib/short-get-handler/index.js"
   },
   "eslintConfig": {
     "env": {
