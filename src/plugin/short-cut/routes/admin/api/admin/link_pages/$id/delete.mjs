@@ -1,11 +1,11 @@
 // View documentation at: https://enhance.dev/docs/learn/starter-project/api
-import { deleteLink_page } from '../../../../../../../../../models/link_pages.mjs'
+import { deleteLink_page } from '../../../../../../../../../lib/models/link_pages.mjs'
 
 
 /**
  * @type {import('@enhance/types').EnhanceApiFn}
  */
-export async function post (req) {
+export async function post(req) {
   const authorized = !!(req.session.authorized)
   if (!authorized) return { status: 401 }
 

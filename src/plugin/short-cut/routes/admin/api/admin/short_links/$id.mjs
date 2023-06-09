@@ -2,13 +2,13 @@
 /**
   * @typedef {import('@enhance/types').EnhanceApiFn} EnhanceApiFn
   */
-import { getShort_link, upsertShort_link, validate } from '../../../../../../../../models/short_links.mjs'
+import { getShort_link, upsertShort_link, validate } from '../../../../../../../../lib/models/short_links.mjs'
 
 
 /**
  * @type {EnhanceApiFn}
  */
-export async function get (req) {
+export async function get(req) {
   const authorized = !!(req.session.authorized)
   if (!authorized) return { location: '/login' }
 
@@ -30,7 +30,7 @@ export async function get (req) {
 /**
  * @type {EnhanceApiFn}
  */
-export async function post (req) {
+export async function post(req) {
   const authorized = !!(req.session.authorized)
   if (!authorized) return { status: 401 }
 
@@ -41,7 +41,7 @@ export async function post (req) {
   let { problems, short_link } = await validate.update(req)
   if (problems) {
     return {
-      session: {...session, problems, short_link },
+      session: { ...session, problems, short_link },
       json: { problems, short_link },
       location: `/admin/short_links/${short_link.key}`
     }

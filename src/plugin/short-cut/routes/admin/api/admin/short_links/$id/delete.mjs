@@ -1,11 +1,11 @@
 // View documentation at: https://enhance.dev/docs/learn/starter-project/api
-import { deleteShort_link } from '../../../../../../../../../models/short_links.mjs'
+import { deleteShort_link } from '../../../../../../../../../lib/models/short_links.mjs'
 
 
 /**
  * @type {import('@enhance/types').EnhanceApiFn}
  */
-export async function post (req) {
+export async function post(req) {
   const authorized = !!(req.session.authorized)
   if (!authorized) return { status: 401 }
 

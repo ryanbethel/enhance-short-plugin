@@ -2,13 +2,13 @@
 /**
   * @typedef {import('@enhance/types').EnhanceApiFn} EnhanceApiFn
   */
-import { getLink_pages, upsertLink_page, validate } from '../../../../../../../models/link_pages.mjs'
+import { getLink_pages, upsertLink_page, validate } from '../../../../../../../lib/models/link_pages.mjs'
 
 
 /**
  * @type {EnhanceApiFn}
  */
-export async function get (req) {
+export async function get(req) {
   const authorized = !!(req.session.authorized)
   if (!authorized) return { location: '/login' }
 
@@ -29,7 +29,7 @@ export async function get (req) {
 /**
  * @type {EnhanceApiFn}
  */
-export async function post (req) {
+export async function post(req) {
   const authorized = !!(req.session.authorized)
   if (!authorized) return { status: 401 }
 

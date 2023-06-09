@@ -1,5 +1,5 @@
 {
-  "name": "enhance-short",
+  "name": "enhance-short-plugin",
   "version": "0.0.1",
   "main": "src/plugin/short-cut/index.js",
   "exports": {
