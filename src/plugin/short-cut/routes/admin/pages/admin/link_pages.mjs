@@ -15,8 +15,37 @@ export default function Html({ html, state }) {
 <div class="mb0">
   <p class="pb-2"><strong class="capitalize">title: </strong>${item?.title || ''}</p>
   <p class="pb-2"><strong class="capitalize">description: </strong>${item?.description || ''}</p>
+  <p class="pb-2"><strong class="capitalize">page route: </strong>${item?.page_url || ''}</p>
   <p class="pb-2"><strong class="capitalize">link_text_1: </strong>${item?.link_text_1 || ''}</p>
   <p class="pb-2"><strong class="capitalize">link_url_1: </strong>${item?.link_url_1 || ''}</p>
+
+  <p class="pb-2"><strong class="capitalize">link_text_2: </strong>${item?.link_text_2 || ''}</p>
+  <p class="pb-2"><strong class="capitalize">link_url_2: </strong>${item?.link_url_2 || ''}</p>
+
+  <p class="pb-2"><strong class="capitalize">link_text_3: </strong>${item?.link_text_3 || ''}</p>
+  <p class="pb-2"><strong class="capitalize">link_url_3: </strong>${item?.link_url_3 || ''}</p>
+
+  <p class="pb-2"><strong class="capitalize">link_text_4: </strong>${item?.link_text_4 || ''}</p>
+  <p class="pb-2"><strong class="capitalize">link_url_4: </strong>${item?.link_url_4 || ''}</p>
+
+  <p class="pb-2"><strong class="capitalize">link_text_5: </strong>${item?.link_text_5 || ''}</p>
+  <p class="pb-2"><strong class="capitalize">link_url_5: </strong>${item?.link_url_5 || ''}</p>
+
+  <p class="pb-2"><strong class="capitalize">link_text_6: </strong>${item?.link_text_6 || ''}</p>
+  <p class="pb-2"><strong class="capitalize">link_url_6: </strong>${item?.link_url_6 || ''}</p>
+
+  <p class="pb-2"><strong class="capitalize">link_text_7: </strong>${item?.link_text_7 || ''}</p>
+  <p class="pb-2"><strong class="capitalize">link_url_7: </strong>${item?.link_url_7 || ''}</p>
+
+  <p class="pb-2"><strong class="capitalize">link_text_8: </strong>${item?.link_text_8 || ''}</p>
+  <p class="pb-2"><strong class="capitalize">link_url_8: </strong>${item?.link_url_8 || ''}</p>
+
+  <p class="pb-2"><strong class="capitalize">link_text_9: </strong>${item?.link_text_9 || ''}</p>
+  <p class="pb-2"><strong class="capitalize">link_url_9: </strong>${item?.link_url_9 || ''}</p>
+
+  <p class="pb-2"><strong class="capitalize">link_text_10: </strong>${item?.link_text_10 || ''}</p>
+  <p class="pb-2"><strong class="capitalize">link_url_10: </strong>${item?.link_url_10 || ''}</p>
+
   <p class="pb-2"><strong class="capitalize">theme: </strong>${item?.theme || ''}</p>
   <p class="pb-2"><strong class="capitalize">key: </strong>${item?.key || ''}</p>
 </div>
