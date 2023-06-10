@@ -39,6 +39,7 @@ export default function Html({ html, state }) {
   <enhance-fieldset legend="Link_page">
   <enhance-text-input label="Title" type="text" id="title" name="title" value="${link_page?.title || ''}" errors="${problems?.title?.errors || ''}"></enhance-text-input>
   <enhance-text-input label="Description" type="text" id="description" name="description" value="${link_page?.description || ''}" errors="${problems?.description?.errors || ''}"></enhance-text-input>
+  <enhance-text-input label="Page route" type="text" id="page_url" name="page_url" value="${link_page?.page_url || ''}" errors="${problems?.page_url?.errors || ''}"></enhance-text-input>
   <enhance-text-input label="Link_text_1" type="text" id="link_text_1" name="link_text_1" value="${link_page?.link_text_1 || ''}" errors="${problems?.link_text_1?.errors || ''}"></enhance-text-input>
   <enhance-text-input label="Link_url_1" type="text" id="link_url_1" name="link_url_1" value="${link_page?.link_url_1 || ''}" errors="${problems?.link_url_1?.errors || ''}"></enhance-text-input>
 
