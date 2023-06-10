@@ -1,4 +1,4 @@
-const { SxgToDate } = require('newbase60')
+import { SxgToDate } from 'newbase60'
 
 export async function get(req) {
   return shortGetHandler(req)
