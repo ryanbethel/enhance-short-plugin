@@ -72,15 +72,6 @@ module.exports = {
         ...redirectRoutes,
         {
           method: 'get',
-          path: '/short',
-          src: path.join(__dirname, 'routes', 'short'),
-          config: {
-            // shared: false,
-            views: true,
-          }
-        },
-        {
-          method: 'get',
           path: '/admin/*',
           src: path.join(__dirname, 'routes', 'admin'),
           config: {

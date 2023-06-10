@@ -3,17 +3,6 @@ export default function linkPage({ html, state }) {
 
   return html`
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
         .container {
             width: 80%;
             text-align: center;
@@ -24,7 +13,6 @@ export default function linkPage({ html, state }) {
         }
 
         h1, p {
-            color: #333;
             grid-column: 1 / -1;
         }
 
@@ -33,8 +21,8 @@ export default function linkPage({ html, state }) {
             padding: 20px;
             text-decoration: none;
             font-size: 20px;
-            color: white;
-            background: #007BFF;
+            color: var(--color-dark);
+            background: lightgreen ;
             border-radius: 5px;
             transition: background 0.3s;
         }
@@ -50,14 +38,19 @@ export default function linkPage({ html, state }) {
         }
     </style>
     <main class="container">
-    <h1>${linkPage.title || ''}</h1>
+    <h1 class="">${linkPage.title || ''}</h1>
     <p>${linkPage.description || ''}</p>
 
-    <a href="${linkPage.link_url_1}" target="_blank">${linkPage.link_text_1}</a>
-    <a href="${linkPage.link_url_1}" target="_blank">${linkPage.link_text_1}</a>
-    <a href="${linkPage.link_url_1}" target="_blank">${linkPage.link_text_1}</a>
-    <a href="${linkPage.link_url_1}" target="_blank">${linkPage.link_text_1}</a>
-    <a href="${linkPage.link_url_1}" target="_blank">${linkPage.link_text_1}</a>
+    ${linkPage.link_url_1 ? `<a href="${linkPage.link_url_1}" class="btn" target="_blank">${linkPage.link_text_1}</a>` : ''}
+    ${linkPage.link_url_2 ? `<a href="${linkPage.link_url_2}" class="btn" target="_blank">${linkPage.link_text_2}</a>` : ''}
+    ${linkPage.link_url_3 ? `<a href="${linkPage.link_url_3}" class="btn" target="_blank">${linkPage.link_text_3}</a>` : ''}
+    ${linkPage.link_url_4 ? `<a href="${linkPage.link_url_4}" class="btn" target="_blank">${linkPage.link_text_4}</a>` : ''}
+    ${linkPage.link_url_5 ? `<a href="${linkPage.link_url_5}" class="btn" target="_blank">${linkPage.link_text_5}</a>` : ''}
+    ${linkPage.link_url_6 ? `<a href="${linkPage.link_url_6}" class="btn" target="_blank">${linkPage.link_text_6}</a>` : ''}
+    ${linkPage.link_url_7 ? `<a href="${linkPage.link_url_7}" class="btn" target="_blank">${linkPage.link_text_7}</a>` : ''}
+    ${linkPage.link_url_8 ? `<a href="${linkPage.link_url_8}" class="btn" target="_blank">${linkPage.link_text_8}</a>` : ''}
+    ${linkPage.link_url_9 ? `<a href="${linkPage.link_url_9}" class="btn" target="_blank">${linkPage.link_text_9}</a>` : ''}
+    ${linkPage.link_url_10 ? `<a href="${linkPage.link_url_10}" class="btn" target="_blank">${linkPage.link_text_10}</a>` : ''}
     </main>
 `
 }
