@@ -106,6 +106,24 @@ module.exports = {
             views: true,
           }
         },
+        {
+          method: 'get',
+          path: '/:root',
+          src: path.join(__dirname, 'routes', 'catchalls'),
+          config: {
+            // shared: false,
+            views: true,
+          }
+        },
+        {
+          method: 'get',
+          path: '/:root/*',
+          src: path.join(__dirname, 'routes', 'catchalls'),
+          config: {
+            // shared: false,
+            views: true,
+          }
+        },
 
       ]
     }
