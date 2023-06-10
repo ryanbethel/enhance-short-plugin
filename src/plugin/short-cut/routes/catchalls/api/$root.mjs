@@ -1,10 +1,6 @@
 import { SxgToDate } from 'newbase60'
 
 export async function get(req) {
-  return shortGetHandler(req)
-}
-
-async function shortGetHandler(req) {
   const { getLink_pages } = await import('../../../../../../lib/models/link_pages.mjs')
   const { getShort_links } = await import('../../../../../../lib/models/short_links.mjs')
   const path = req.rawPath
@@ -62,7 +58,6 @@ function extractDateParts(date) {
 }
 
 function parseShort(str) {
-  console.log({ str })
   if (str.length < 5) {
     throw new Error('Invalid string format');
   }

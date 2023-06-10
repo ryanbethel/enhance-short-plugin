@@ -62,3 +62,27 @@ export async function post(req) {
     }
   }
 }
+
+
+const shortWords = [
+  'act', 'add', 'age', 'aim', 'air', 'all', 'arm', 'art', 'ask', 'bag',
+  'bar', 'bed', 'big', 'bit', 'box', 'boy', 'bus', 'buy', 'can', 'car',
+  'cat', 'cut', 'dad', 'day', 'dog', 'dry', 'due', 'ear', 'eat', 'end',
+  'eye', 'far', 'fat', 'few', 'fit', 'fix', 'fly', 'for', 'fun', 'gap',
+  'gas', 'get', 'guy', 'hat', 'her', 'him', 'hit', 'hot', 'how', 'ice',
+  'ill', 'ink', 'jar', 'jet', 'job', 'key', 'kid', 'kin', 'kit', 'leg',
+  'let', 'lie', 'lip', 'log', 'lot', 'low', 'mad', 'man', 'map', 'mat',
+  'may', 'mom', 'mud', 'net', 'new', 'not', 'now', 'nut', 'oak', 'old',
+  'one', 'out', 'pan', 'pen', 'pet', 'pie', 'pin', 'pit', 'pot', 'put',
+  'ran', 'rat', 'red', 'rip', 'row', 'rub', 'run', 'sad', 'saw', 'sea',
+  'see', 'set', 'she', 'sit', 'sky', 'son', 'sun', 'tab', 'tea', 'tie',
+  'tin', 'tip', 'top', 'toy', 'try', 'two', 'use', 'van', 'vet', 'war',
+  'was', 'way', 'web', 'wet', 'who', 'why', 'win', 'yes', 'yet', 'you',
+  'zip', 'ant', 'bee', 'cow', 'cub', 'dog', 'egg', 'fun', 'hen', 'ink',
+  'jam', 'kid', 'lap', 'men', 'nip', 'owl', 'pig', 'rug', 'sip', 'tin',
+  'urn', 'vow', 'wax', 'yip', 'zap', 'bay', 'cay', 'day', 'ebb', 'hay',
+  'icy', 'joy', 'key', 'lay', 'may', 'nay', 'oaf', 'pay', 'ray', 'say',
+  'toy', 'way', 'boy', 'coy', 'dry', 'guy', 'joy', 'soy', 'toy', 'wry',
+  'gym', 'shy', 'sky', 'sly', 'spy', 'try', 'why', 'pry', 'fry', 'cry',
+  'ply', 'bye'
+]
