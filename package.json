@@ -5,7 +5,9 @@
   "exports": {
     ".": "./src/plugin/short-cut/index.js",
     "./calc-short-link": "./lib/calc-short-link/index.js",
-    "./short-get-handler": "./lib/short-get-handler/index.js"
+    "./short-get-handler": "./lib/short-get-handler/index.js",
+    "./link_pages": "./lib/models/link_pages.mjs",
+    "./short_pages": "./lib/models/short_pages.mjs",
   },
   "eslintConfig": {
     "env": {
