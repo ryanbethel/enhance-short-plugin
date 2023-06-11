@@ -38,7 +38,8 @@ module.exports = {
     copy: async ({ arc, inventory, copy }) => {
       await copy([
         {
-          source: path.join(__dirname, '..', '..', '..', 'lib', 'models'),
+          // source: path.join(__dirname, '..', '..', '..', 'lib', 'models'),
+          source: path.join('.', 'node_modules', 'enhance-short-plugin', 'lib', 'models'),
           target: '_short-models',
         },
       ])
