@@ -1,13 +1,9 @@
 import { SxgToDate } from 'newbase60'
-// import { getLink_pages } from '../../../../../../lib/models/link_pages.mjs'
-// import { getShort_links } from '../../../../../../lib/models/short_links.mjs'
-import { getLink_pages } from 'enhance-short-plugin/link_pages'
-import { getShort_links } from 'enhance-short-plugin/short_pages'
+import { getLink_pages } from './_short-models/link_pages'
+import { getShort_links } from './_short-models/short_pages'
 
 export async function get(req) {
   console.log("root catchall", req)
-  // const { getLink_pages } = await import('../../../../../../lib/models/link_pages.mjs')
-  // const { getShort_links } = await import('../../../../../../lib/models/short_links.mjs')
   const path = req.rawPath
 
   console.log("here1")

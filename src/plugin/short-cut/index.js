@@ -34,6 +34,16 @@ module.exports = {
     }
     return `${shortDomain}/${types[type]}${sxg}${ordinal}`
   },
+  hydrate: {
+    copy: async ({ arc, inventory, copy }) => {
+      await copy([
+        {
+          source: path.join(__dirname, '..', '..', '..', 'lib', 'models'),
+          target: '_short-models',
+        },
+      ])
+    }
+  },
   // sandbox: { 
   //   start: (params)=>{
   //     checkDates(postsDir(params))
