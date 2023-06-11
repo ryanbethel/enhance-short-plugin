@@ -1,6 +1,6 @@
 import { SxgToDate } from 'newbase60'
-import { getLink_pages } from './node_modules/_short-models/link_pages'
-import { getShort_links } from './node_modules/_short-models/short_pages'
+import { getLink_pages } from './node_modules/_short-models/link_pages.mjs'
+import { getShort_links } from './node_modules/_short-models/short_pages.mjs'
 
 export async function get(req) {
   console.log("root catchall", req)
