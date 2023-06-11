@@ -1,5 +1,5 @@
 // View documentation at: https://enhance.dev/docs/learn/starter-project/api
-import { deleteLink_page } from '../../../../../../../../../lib/models/link_pages.mjs'
+import { deleteLink_page } from '../../../../node_modules/_short-models/link_pages.mjs'
 
 
 /**

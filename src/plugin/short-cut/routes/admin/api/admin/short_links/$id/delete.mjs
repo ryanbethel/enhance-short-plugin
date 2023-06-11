@@ -1,5 +1,5 @@
 // View documentation at: https://enhance.dev/docs/learn/starter-project/api
-import { deleteShort_link } from '../../../../../../../../../lib/models/short_links.mjs'
+import { deleteShort_link } from '../../../../node_modules/_short-models/short_links.mjs'
 
 
 /**

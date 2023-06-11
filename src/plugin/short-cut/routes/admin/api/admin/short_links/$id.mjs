@@ -2,7 +2,7 @@
 /**
   * @typedef {import('@enhance/types').EnhanceApiFn} EnhanceApiFn
   */
-import { getShort_link, upsertShort_link, validate } from '../../../../../../../../lib/models/short_links.mjs'
+import { getShort_link, upsertShort_link, validate } from '../../../node_modules/_short-models/short_links.mjs'
 
 
 /**

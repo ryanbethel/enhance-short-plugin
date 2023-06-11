@@ -3,10 +3,8 @@ import { getLink_pages } from '../node_modules/_short-models/link_pages.mjs'
 import { getShort_links } from '../node_modules/_short-models/short_links.mjs'
 
 export async function get(req) {
-  console.log("root catchall", req)
   const path = req.rawPath
 
-  console.log("here1")
   const linkPages = await getLink_pages()
   const linkPage = linkPages.find(link => link.page_url === path.replace(/^\//, ''))
   if (linkPage) {
@@ -14,7 +12,6 @@ export async function get(req) {
       json: { linkPage }
     }
   }
-  console.log("here2")
   const shortLinks = await getShort_links()
   const shortLink = shortLinks.find(link => link.short_url === path.replace(/^\//, ''))
   if (shortLink) {
@@ -24,7 +21,6 @@ export async function get(req) {
     }
   }
 
-  console.log("here3")
   try {
     const parsed = parseShort(path.replace(/^\//, ''))
     const { year, dayOfMonth, month } = extractDateParts(SxgToDate(parsed.sxgDate))
