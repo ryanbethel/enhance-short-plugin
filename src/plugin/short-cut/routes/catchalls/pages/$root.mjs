@@ -41,11 +41,16 @@ export default function linkPage({ html, state }) {
     <h1 class="">${linkPage.title || ''}</h1>
     <p>${linkPage.description || ''}</p>
 
-    <a href="${linkPage.link_url_1}" class="btn" target="_blank">${linkPage.link_text_1}</a>
-    <a href="${linkPage.link_url_1}" class="btn" target="_blank">${linkPage.link_text_1}</a>
-    <a href="${linkPage.link_url_1}" class="btn" target="_blank">${linkPage.link_text_1}</a>
-    <a href="${linkPage.link_url_1}" class="btn" target="_blank">${linkPage.link_text_1}</a>
-    <a href="${linkPage.link_url_1}" class="btn" target="_blank">${linkPage.link_text_1}</a>
+    ${linkPage.link_url_1 ? `<a href="${linkPage.link_url_1}" class="btn" target="_blank">${linkPage.link_text_1}</a>` : ''}
+    ${linkPage.link_url_2 ? `<a href="${linkPage.link_url_2}" class="btn" target="_blank">${linkPage.link_text_2}</a>` : ''}
+    ${linkPage.link_url_3 ? `<a href="${linkPage.link_url_3}" class="btn" target="_blank">${linkPage.link_text_3}</a>` : ''}
+    ${linkPage.link_url_4 ? `<a href="${linkPage.link_url_4}" class="btn" target="_blank">${linkPage.link_text_4}</a>` : ''}
+    ${linkPage.link_url_5 ? `<a href="${linkPage.link_url_5}" class="btn" target="_blank">${linkPage.link_text_5}</a>` : ''}
+    ${linkPage.link_url_6 ? `<a href="${linkPage.link_url_6}" class="btn" target="_blank">${linkPage.link_text_6}</a>` : ''}
+    ${linkPage.link_url_7 ? `<a href="${linkPage.link_url_7}" class="btn" target="_blank">${linkPage.link_text_7}</a>` : ''}
+    ${linkPage.link_url_8 ? `<a href="${linkPage.link_url_8}" class="btn" target="_blank">${linkPage.link_text_8}</a>` : ''}
+    ${linkPage.link_url_9 ? `<a href="${linkPage.link_url_9}" class="btn" target="_blank">${linkPage.link_text_9}</a>` : ''}
+    ${linkPage.link_url_10 ? `<a href="${linkPage.link_url_10}" class="btn" target="_blank">${linkPage.link_text_10}</a>` : ''}
     </main>
 `
 }
