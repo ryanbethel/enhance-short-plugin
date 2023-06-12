@@ -71,6 +71,17 @@ The slug in this url scheme is optional. The date, type, and ordinal fully defin
 
 This shortlink format was borrowed from [indieweb.org/permashortlink](https://indieweb.org/permashortlink).
 
+### Calculating permashort links
+There are two utilities to calculate the short links for sharing.
+By prepending a url with 'shorten' you get the new url that can be shared.
+- `/shorten/2020/11/16/blog/1/graphql-with-dynamodb-a-good-fit/` ->  `/b59h1`
+
+By importing the `calc-short-link` import you can calculate the shortened link for a given path on the server.
+```javascript
+import calcShortLink from 'enhance-short-plugin/calc-short-link'
+const shortLink = calcShortLink(req.path)
+```
+
 ## Internal Routes used
 This plugin uses an internal `/api/$root.mjs` and `api/$root/$$.mjs` routes to catch any links, shortened urls, and permishortlinks.
 You should avoid redefining a root dynamic route and a root dynamic catchall in your app. 
